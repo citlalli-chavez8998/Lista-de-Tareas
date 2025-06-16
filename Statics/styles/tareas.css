@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "DM";
+    src: url("../fonts/DMSerifText-Regular.ttf");
+}
+body{
+    background-color: rgb(246, 211, 237);
+    font-family: DM, serif;
+}
+h1{
+    color : rgb(195, 14, 140);
+    justify-self: center; 
+    font-size: 40px;
+}
+.titMenu{
+    font-size: 20px;
+}
+#botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#grupoBotones {
+    display: flex;
+    flex-wrap: wrap;
+    padding:5px;
+    margin: 5px;
+    width: 80%;
+    justify-content: space-evenly;
+}   
+.Boton{
+    background-color:rgb(213, 16, 154); 
+    color: rgb(243, 254, 255);
+    font-family: DM, serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex: 1 1 15%;
+    min-width: 80px;
+    max-width: 20%;
+}
+.Boton:active{
+    background-color:rgb(165, 8, 118); 
+}
+.Boton:hover{
+    cursor: pointer;
+}
+.Menu{
+    background-color: rgb(243, 254, 255);
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px 5px 5px 5px;
+    border-radius: 8px;
+    min-width:17%;
+}
+.btnTarea{
+    max-width:100%;
+}
+#contenedor{
+    width: 75%;
+    height: 100%;
+    background-color:rgb(243, 254, 255);
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 40px;
+    justify-content: center;
+    justify-self: center;
+}
+.Tareas{
+    width: 150px;
+    height: 150px;
+    background-color:rgb(213, 16, 154); 
+    color: rgb(243, 254, 255);
+    text-align:center;
+    align-content: center;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20%;
+    transition-duration: 0.4s;
+}
+.Tareas:hover{
+    width: 160px;
+    height: 160px;
+}
