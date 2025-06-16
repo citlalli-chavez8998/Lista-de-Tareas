@@ -1,3 +1,29 @@
+function nuevaTarea(texto){
+    let nuevaTarea = document.createElement("div");
+    nuevaTarea.setAttribute("class", "Tareas");
+    nuevaTarea.textContent = texto;
+    nuevaTarea.addEventListener("click", () => {
+        contenedor.prepend(nuevaTarea);
+    });
+    nuevaTarea.addEventListener("mouseout", () => {
+        nuevaTarea.textContent = texto;
+    });
+    nuevaTarea.addEventListener("mouseover", () => {
+        nuevaTarea.textContent = "Click para mover la tarea al inicio de la lista";
+    });
+    contenedor.appendChild(nuevaTarea); 
+}
+function nuevaTarjeta(ruta, alt){
+    let nuevaTarjeta = document.createElement("img");
+    nuevaTarjeta.setAttribute("class", "Tareas");
+    nuevaTarjeta.setAttribute("src", ruta);
+    nuevaTarjeta.setAttribute("alt", alt);
+    nuevaTarjeta.addEventListener("click", () => {
+        contenedor.prepend(nuevaTarjeta);
+    });
+    contenedor.appendChild(nuevaTarjeta);
+}
+
 botAgrega = document.getElementById("agregar");
 listaTareas = document.getElementById("listaTareas");
 botAgrega.addEventListener("click", ()=>{
@@ -13,42 +39,27 @@ botAgrega.addEventListener("click", ()=>{
 
 botLimpia = document.getElementById("limpiar");
 botLimpia.addEventListener("click", ()=>{
-    let nuevaTarea = document.createElement("div");
-    nuevaTarea.setAttribute("class", "Tareas");
-    nuevaTarea.textContent = "Limpiar mi cuarto";
-    contenedor.appendChild(nuevaTarea);
+    nuevaTarea("Limpiar mi cuarto");
 });
 
 botEstudia = document.getElementById("estudiar");
 botEstudia.addEventListener("click", ()=>{
-    let nuevaTarea = document.createElement("div");
-    nuevaTarea.setAttribute("class", "Tareas");
-    nuevaTarea.textContent = "Estudiar para mi examen";
-    contenedor.appendChild(nuevaTarea);
+    nuevaTarea("Estudiar para mi examen");
 });
 
 botMate = document.getElementById("mate");
 botMate.addEventListener("click", ()=>{
-    let nuevaTarea = document.createElement("div");
-    nuevaTarea.setAttribute("class", "Tareas");
-    nuevaTarea.textContent = "Tarea de mate";
-    contenedor.appendChild(nuevaTarea);
+    nuevaTarea("Tarea de mate");
 });
 
 botLee = document.getElementById("leer");
 botLee.addEventListener("click", ()=>{
-    let nuevaTarea = document.createElement("div");
-    nuevaTarea.setAttribute("class", "Tareas");
-    nuevaTarea.textContent = "Leer 10 páginas de un libro";
-    contenedor.appendChild(nuevaTarea);
+    nuevaTarea("Leer 10 páginas de un libro");
 });
 
 botRepasa = document.getElementById("repasar");
 botRepasa.addEventListener("click", ()=>{
-    let nuevaTarea = document.createElement("div");
-    nuevaTarea.setAttribute("class", "Tareas");
-    nuevaTarea.textContent = "Repasar apuntes";
-    contenedor.appendChild(nuevaTarea);
+    nuevaTarea("Repasar apuntes");
 });
 
 botQuita = document.getElementById("quitar");
@@ -90,45 +101,25 @@ botTarjeta.addEventListener("click", ()=>{
 
 botAmogus = document.getElementById("amogus");
 botAmogus.addEventListener("click", ()=>{
-    let nuevaTarjeta = document.createElement("img");
-    nuevaTarjeta.setAttribute("class", "Tareas");
-    nuevaTarjeta.setAttribute("src", "../Statics/media/img/amogus.png");
-    nuevaTarjeta.setAttribute("alt", "Among us");
-    contenedor.appendChild(nuevaTarjeta);
+    nuevaTarjeta("../Statics/media/img/amogus.png", "Among Us");
 });
 
 botTeorema = document.getElementById("teorema");
 botTeorema.addEventListener("click", ()=>{
-    let nuevaTarjeta = document.createElement("img");
-    nuevaTarjeta.setAttribute("class", "Tareas");
-    nuevaTarjeta.setAttribute("src", "../Statics/media/img/teorema.jpg");
-    nuevaTarjeta.setAttribute("alt", "Teorema de Pitágoras");
-    contenedor.appendChild(nuevaTarjeta);
+    nuevaTarjeta("../Statics/media/img/teorema.jpg", "Teorema de Pitágoras");
 });
 
 botTux = document.getElementById("tux");
 botTux.addEventListener("click", ()=>{
-    let nuevaTarjeta = document.createElement("img");
-    nuevaTarjeta.setAttribute("class", "Tareas");
-    nuevaTarjeta.setAttribute("src", "../Statics/media/img/tux.png");
-    nuevaTarjeta.setAttribute("alt", "Tux");
-    contenedor.appendChild(nuevaTarjeta);
+    nuevaTarjeta("../Statics/media/img/tux.png", "Tux");
 });
 
 botCirc = document.getElementById("circ");
 botCirc.addEventListener("click", ()=>{
-    let nuevaTarjeta = document.createElement("img");
-    nuevaTarjeta.setAttribute("class", "Tareas");
-    nuevaTarjeta.setAttribute("src", "../Statics/media/img/circulo_Cromatico.png");
-    nuevaTarjeta.setAttribute("alt", "Círculo Cromático");
-    contenedor.appendChild(nuevaTarjeta);
+    nuevaTarjeta("../Statics/media/img/circulo_Cromatico.png", "Círculo Cromático");
 });
 
 botMru = document.getElementById("mru");
 botMru.addEventListener("click", ()=>{
-    let nuevaTarjeta = document.createElement("img");
-    nuevaTarjeta.setAttribute("class", "Tareas");
-    nuevaTarjeta.setAttribute("src", "../Statics/media/img/mru.jpg");
-    nuevaTarjeta.setAttribute("alt", "Fórmula del Movimiento Rectilíneo Uniforme");
-    contenedor.appendChild(nuevaTarjeta);
+    nuevaTarjeta("../Statics/media/img/mru.jpg", "Fórmula del Movimiento Rectilíneo Uniforme");
 });
